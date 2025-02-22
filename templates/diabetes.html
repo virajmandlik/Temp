@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Hub - Diabetes Analytics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0f1c;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #60a5fa, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-container {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(124, 58, 237, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #e5e7eb;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 0.5rem;
+            color: #f3f4f6;
+            transition: all 0.3s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #60a5fa, #7c3aed);
+            border: none;
+            border-radius: 0.5rem;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+        }
+
+        .results-container {
+            display: none;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(124, 58, 237, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .result-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .result-item h3 {
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #60a5fa, #7c3aed);
+            border-radius: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: opacity 0.3s;
+        }
+
+        .download-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(96, 165, 250, 0.1);
+            border-left-color: #60a5fa;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-pattern"></div>
+
+    <div class="container">
+        <h1>Diabetes Risk Analysis</h1>
+
+        <div class="form-container">
+            <form id="diabetesForm" onsubmit="predictDiabetes(event)">
+                <div class="input-group">
+                    <label class="input-label" for="pregnancies">Number of Pregnancies</label>
+                    <input type="number" id="pregnancies" class="input-field" required min="0">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="glucose">Glucose Level (mg/dL)</label>
+                    <input type="number" id="glucose" class="input-field" required min="0">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="blood_pressure">Blood Pressure (mm Hg)</label>
+                    <input type="number" id="blood_pressure" class="input-field" required min="0">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="skin_thickness">Skin Thickness (mm)</label>
+                    <input type="number" id="skin_thickness" class="input-field" required min="0">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="insulin">Insulin Level (mu U/ml)</label>
+                    <input type="number" id="insulin" class="input-field" required min="0">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="bmi">BMI</label>
+                    <input type="number" id="bmi" class="input-field" required min="0" step="0.1">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="diabetes_pedigree">Diabetes Pedigree Function</label>
+                    <input type="number" id="diabetes_pedigree" class="input-field" required min="0" step="0.001">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="age">Age</label>
+                    <input type="number" id="age" class="input-field" required min="0">
+                </div>
+
+                <button type="submit" class="submit-btn">Analyze Risk</button>
+            </form>
+        </div>
+
+        <div class="loading">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="results" class="results-container">
+            <div class="result-item">
+                <h3>Prediction Result</h3>
+                <p id="prediction"></p>
+                <p id="probability"></p>
+            </div>
+
+            <div class="result-item">
+                <h3>Precautions</h3>
+                <p id="precautions"></p>
+            </div>
+
+            <div class="result-item">
+                <h3>Medications</h3>
+                <p id="medications"></p>
+            </div>
+
+            <a href="/download_report" class="download-btn" id="downloadReport">Download Detailed Report</a>
+        </div>
+    </div>
+
+    <script>
+        async function predictDiabetes(event) {
+            event.preventDefault();
+
+            const loading = document.querySelector('.loading');
+            const results = document.getElementById('results');
+
+            loading.style.display = 'block';
+            results.style.display = 'none';
+
+            const formData = {
+                pregnancies: document.getElementById('pregnancies').value,
+                glucose: document.getElementById('glucose').value,
+                blood_pressure: document.getElementById('blood_pressure').value,
+                skin_thickness: document.getElementById('skin_thickness').value,
+                insulin: document.getElementById('insulin').value,
+                bmi: document.getElementById('bmi').value,
+                diabetes_pedigree: document.getElementById('diabetes_pedigree').value,
+                age: document.getElementById('age').value
+            };
+
+            try {
+                                const response = await fetch('/predict_diabetes', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                loading.style.display = 'none';
+                results.style.display = 'block';
+
+                // Displaying results from the server response
+                document.getElementById('prediction').textContent = `Prediction: ${data.prediction}`;
+                document.getElementById('probability').textContent = `Probability: ${data.probability}%`;
+                document.getElementById('precautions').textContent = data.precautions;
+                document.getElementById('medications').textContent = data.medications;
+
+                // Optionally, enable download report link if available
+                if (data.download_report_link) {
+                    document.getElementById('downloadReport').href = data.download_report_link;
+                    document.getElementById('downloadReport').style.display = 'inline-block';
+                } else {
+                    document.getElementById('downloadReport').style.display = 'none';
+                }
+            } catch (error) {
+                loading.style.display = 'none';
+                alert('An error occurred. Please try again later.');
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
