@@ -549,3 +549,338 @@
 2025-02-22 18:11:52,209 - INFO - 127.0.0.1 - - [22/Feb/2025 18:11:52] "GET / HTTP/1.1" 200 -
 2025-02-22 18:11:52,480 - INFO - 127.0.0.1 - - [22/Feb/2025 18:11:52] "GET /predict HTTP/1.1" 200 -
 2025-02-22 18:12:06,978 - INFO - 127.0.0.1 - - [22/Feb/2025 18:12:06] "POST /predict HTTP/1.1" 200 -
+2025-02-22 21:40:26,657 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/chatbot/config.py', reloading
+2025-02-22 21:40:27,069 - INFO -  * Restarting with stat
+2025-02-22 21:40:29,367 - WARNING -  * Debugger is active!
+2025-02-22 21:40:29,403 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 21:42:28,270 - INFO - 127.0.0.1 - - [22/Feb/2025 21:42:28] "GET / HTTP/1.1" 200 -
+2025-02-22 21:42:48,734 - INFO - 127.0.0.1 - - [22/Feb/2025 21:42:48] "POST /predict HTTP/1.1" 200 -
+2025-02-22 21:44:26,533 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 21:44:26,843 - INFO -  * Restarting with stat
+2025-02-22 21:44:29,257 - WARNING -  * Debugger is active!
+2025-02-22 21:44:29,302 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 21:44:29,413 - INFO - 127.0.0.1 - - [22/Feb/2025 21:44:29] "POST /predict HTTP/1.1" 200 -
+2025-02-22 21:44:49,100 - INFO - 127.0.0.1 - - [22/Feb/2025 21:44:49] "POST /predict HTTP/1.1" 200 -
+2025-02-22 21:45:03,423 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:03] "GET / HTTP/1.1" 200 -
+2025-02-22 21:45:08,335 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:08] "GET / HTTP/1.1" 200 -
+2025-02-22 21:45:10,073 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:10] "GET /predict HTTP/1.1" 200 -
+2025-02-22 21:45:48,235 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 21:45:48,452 - INFO -  * Restarting with stat
+2025-02-22 21:45:50,174 - WARNING -  * Debugger is active!
+2025-02-22 21:45:50,202 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 21:45:50,250 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:50] "GET /predict HTTP/1.1" 200 -
+2025-02-22 21:45:55,408 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:55] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-22 21:45:57,274 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:45:57,301 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,302 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,305 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,305 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,975 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:45:57,979 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,980 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,984 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:45:57,986 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:57] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:45:58,333 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:58] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:45:58,338 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:58] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:45:58,339 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:58] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:45:58,343 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:58] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:45:58,347 - INFO - 127.0.0.1 - - [22/Feb/2025 21:45:58] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:46:00,297 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:00] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 21:46:02,717 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:02] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-22 21:46:05,929 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:05] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-22 21:46:06,754 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:06] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:46:06,758 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:06] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:46:06,759 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:06] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:46:06,766 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:06] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:46:06,768 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:06] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:46:11,700 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:11] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:46:11,704 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:46:11,708 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:46:11,711 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:46:11,712 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:46:13,654 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:13] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:46:13,659 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:13] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:46:13,661 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:13] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:46:13,662 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:13] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:46:13,663 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:13] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:46:22,410 - INFO - 127.0.0.1 - - [22/Feb/2025 21:46:22] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 21:46:35,986 - INFO - Saved image to: uploads/20250222_214635/WhatsApp_Image_2025-01-27_at_11.00.24.jpeg
+2025-02-22 21:47:39,126 - INFO - HTTP Request: POST https://sought-precise-lizard.ngrok-free.app/api/chat "HTTP/1.1 200 OK"
+2025-02-22 21:47:39,135 - INFO - 127.0.0.1 - - [22/Feb/2025 21:47:39] "POST /chat HTTP/1.1" 200 -
+2025-02-22 21:48:06,697 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:06] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-02-22 21:48:06,703 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:06] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-02-22 21:48:06,705 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-22 21:48:07,095 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:07] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-02-22 21:48:07,097 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:07] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-02-22 21:48:07,098 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-22 21:48:08,199 - INFO - HTTP Request: POST https://sought-precise-lizard.ngrok-free.app/api/chat "HTTP/1.1 200 OK"
+2025-02-22 21:48:08,233 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:08] "POST /chat HTTP/1.1" 200 -
+2025-02-22 21:48:09,305 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:09] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 21:48:11,171 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:11] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:48:11,180 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png&s=eurGIHH6AyTrBdQ1yCip HTTP/1.1[0m" 304 -
+2025-02-22 21:48:11,184 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-22 21:48:11,185 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-22 21:48:11,186 - INFO - 127.0.0.1 - - [22/Feb/2025 21:48:11] "[36mGET /services?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-22 21:50:36,737 - INFO - 127.0.0.1 - - [22/Feb/2025 21:50:36] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:50:37,095 - INFO - 127.0.0.1 - - [22/Feb/2025 21:50:37] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-22 21:51:11,318 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 21:51:11,591 - INFO -  * Restarting with stat
+2025-02-22 21:51:13,747 - WARNING -  * Debugger is active!
+2025-02-22 21:51:13,782 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 21:51:13,828 - INFO - 127.0.0.1 - - [22/Feb/2025 21:51:13] "GET / HTTP/1.1" 200 -
+2025-02-22 21:51:13,829 - INFO - 127.0.0.1 - - [22/Feb/2025 21:51:13] "GET / HTTP/1.1" 200 -
+2025-02-22 21:51:20,000 - INFO - 127.0.0.1 - - [22/Feb/2025 21:51:20] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:51:21,357 - INFO - 127.0.0.1 - - [22/Feb/2025 21:51:21] "GET / HTTP/1.1" 200 -
+2025-02-22 21:51:22,568 - INFO - 127.0.0.1 - - [22/Feb/2025 21:51:22] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:51:24,504 - INFO - 127.0.0.1 - - [22/Feb/2025 21:51:24] "GET / HTTP/1.1" 200 -
+2025-02-22 21:53:03,877 - INFO - 127.0.0.1 - - [22/Feb/2025 21:53:03] "GET /services HTTP/1.1" 200 -
+2025-02-22 21:53:18,179 - INFO - 127.0.0.1 - - [22/Feb/2025 21:53:18] "POST /predict HTTP/1.1" 200 -
+2025-02-22 21:53:43,688 - INFO - 127.0.0.1 - - [22/Feb/2025 21:53:43] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:02:19,082 - INFO - 127.0.0.1 - - [22/Feb/2025 22:02:19] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:06:08,968 - INFO - 127.0.0.1 - - [22/Feb/2025 22:06:08] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:07:07,229 - INFO - Saved image to: uploads/20250222_220707/WhatsApp_Image_2025-01-27_at_11.00.24.jpeg
+2025-02-22 22:07:30,731 - INFO - 127.0.0.1 - - [22/Feb/2025 22:07:30] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:07:31,741 - INFO - 127.0.0.1 - - [22/Feb/2025 22:07:31] "GET / HTTP/1.1" 200 -
+2025-02-22 22:07:35,042 - INFO - 127.0.0.1 - - [22/Feb/2025 22:07:35] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:07:37,506 - INFO - 127.0.0.1 - - [22/Feb/2025 22:07:37] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:08:08,711 - INFO - HTTP Request: POST https://sought-precise-lizard.ngrok-free.app/api/chat "HTTP/1.1 200 OK"
+2025-02-22 22:08:08,717 - INFO - 127.0.0.1 - - [22/Feb/2025 22:08:08] "POST /chat HTTP/1.1" 200 -
+2025-02-22 22:14:34,364 - INFO - 127.0.0.1 - - [22/Feb/2025 22:14:34] "POST /predict HTTP/1.1" 200 -
+2025-02-22 22:14:39,944 - INFO - 127.0.0.1 - - [22/Feb/2025 22:14:39] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:14:52,390 - INFO - 127.0.0.1 - - [22/Feb/2025 22:14:52] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:14:53,108 - INFO - 127.0.0.1 - - [22/Feb/2025 22:14:53] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:14:53,518 - INFO - 127.0.0.1 - - [22/Feb/2025 22:14:53] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:14:58,218 - INFO - 127.0.0.1 - - [22/Feb/2025 22:14:58] "GET / HTTP/1.1" 200 -
+2025-02-22 22:15:00,515 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:00] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:15:33,666 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:33] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:15:35,519 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:35] "GET / HTTP/1.1" 200 -
+2025-02-22 22:15:36,867 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:36] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:15:37,885 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:37] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:15:45,881 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:45] "GET / HTTP/1.1" 200 -
+2025-02-22 22:15:47,702 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:47] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:15:48,984 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:48] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 22:15:52,115 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:52] "GET / HTTP/1.1" 200 -
+2025-02-22 22:15:59,998 - INFO - 127.0.0.1 - - [22/Feb/2025 22:15:59] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:16:03,198 - INFO - 127.0.0.1 - - [22/Feb/2025 22:16:03] "GET / HTTP/1.1" 200 -
+2025-02-22 22:16:05,868 - INFO - 127.0.0.1 - - [22/Feb/2025 22:16:05] "GET / HTTP/1.1" 200 -
+2025-02-22 22:16:06,545 - INFO - 127.0.0.1 - - [22/Feb/2025 22:16:06] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:16:55,062 - INFO - 127.0.0.1 - - [22/Feb/2025 22:16:55] "GET /services HTTP/1.1" 200 -
+2025-02-22 22:16:58,555 - INFO - 127.0.0.1 - - [22/Feb/2025 22:16:58] "GET / HTTP/1.1" 200 -
+2025-02-22 22:16:59,700 - INFO - 127.0.0.1 - - [22/Feb/2025 22:16:59] "[33mGET /Analytic HTTP/1.1[0m" 404 -
+2025-02-22 22:17:33,047 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 22:17:33,416 - INFO -  * Restarting with stat
+2025-02-22 22:17:35,962 - WARNING -  * Debugger is active!
+2025-02-22 22:17:36,005 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 22:44:51,997 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 22:44:52,350 - INFO -  * Restarting with stat
+2025-02-22 22:49:39,051 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-22 22:49:39,051 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-22 22:49:39,052 - INFO -  * Restarting with stat
+2025-02-22 22:49:40,462 - WARNING -  * Debugger is active!
+2025-02-22 22:49:40,501 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 22:49:42,856 - INFO - 127.0.0.1 - - [22/Feb/2025 22:49:42] "GET / HTTP/1.1" 200 -
+2025-02-22 22:49:44,326 - INFO - 127.0.0.1 - - [22/Feb/2025 22:49:44] "[33mGET /analytic HTTP/1.1[0m" 404 -
+2025-02-22 22:50:05,172 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 22:50:05,416 - INFO -  * Restarting with stat
+2025-02-22 22:50:07,443 - WARNING -  * Debugger is active!
+2025-02-22 22:50:07,467 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 22:50:07,516 - INFO - 127.0.0.1 - - [22/Feb/2025 22:50:07] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 22:52:24,539 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 22:52:24,881 - INFO -  * Restarting with stat
+2025-02-22 22:56:38,738 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-22 22:56:38,739 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-22 22:56:38,740 - INFO -  * Restarting with stat
+2025-02-22 22:56:40,556 - WARNING -  * Debugger is active!
+2025-02-22 22:56:40,593 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 22:56:45,407 - INFO - 127.0.0.1 - - [22/Feb/2025 22:56:45] "GET / HTTP/1.1" 200 -
+2025-02-22 22:56:50,332 - INFO - 127.0.0.1 - - [22/Feb/2025 22:56:50] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 22:56:51,528 - INFO - 127.0.0.1 - - [22/Feb/2025 22:56:51] "[31m[1mGET /predict_diabetes HTTP/1.1[0m" 405 -
+2025-02-22 22:56:55,535 - INFO - 127.0.0.1 - - [22/Feb/2025 22:56:55] "[31m[1mGET /predict_diabetes HTTP/1.1[0m" 405 -
+2025-02-22 22:57:52,815 - INFO - 127.0.0.1 - - [22/Feb/2025 22:57:52] "[31m[1mGET /predict_diabetes HTTP/1.1[0m" 405 -
+2025-02-22 22:57:56,879 - INFO - 127.0.0.1 - - [22/Feb/2025 22:57:56] "GET /predict HTTP/1.1" 200 -
+2025-02-22 22:57:57,826 - INFO - 127.0.0.1 - - [22/Feb/2025 22:57:57] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 22:58:21,762 - INFO - 127.0.0.1 - - [22/Feb/2025 22:58:21] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 22:58:38,630 - INFO - 127.0.0.1 - - [22/Feb/2025 22:58:38] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:01:14,165 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:14] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:01:34,088 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:01:34,357 - INFO -  * Restarting with stat
+2025-02-22 23:01:35,910 - WARNING -  * Debugger is active!
+2025-02-22 23:01:35,945 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:01:42,629 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:42] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:01:45,177 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:45] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:01:46,294 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:46] "GET / HTTP/1.1" 200 -
+2025-02-22 23:01:48,637 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:48] "GET /services HTTP/1.1" 200 -
+2025-02-22 23:01:50,637 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:50] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 23:01:57,933 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:57] "GET /services HTTP/1.1" 200 -
+2025-02-22 23:01:58,947 - INFO - 127.0.0.1 - - [22/Feb/2025 23:01:58] "GET / HTTP/1.1" 200 -
+2025-02-22 23:02:00,062 - INFO - 127.0.0.1 - - [22/Feb/2025 23:02:00] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:04:47,524 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:04:47,784 - INFO -  * Restarting with stat
+2025-02-22 23:04:50,124 - WARNING -  * Debugger is active!
+2025-02-22 23:04:50,163 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:05:54,295 - INFO - 127.0.0.1 - - [22/Feb/2025 23:05:54] "[33mGET /appointments HTTP/1.1[0m" 404 -
+2025-02-22 23:05:54,312 - INFO - 127.0.0.1 - - [22/Feb/2025 23:05:54] "[33mGET /static/js/appointments.js HTTP/1.1[0m" 404 -
+2025-02-22 23:05:54,763 - INFO - 127.0.0.1 - - [22/Feb/2025 23:05:54] "GET / HTTP/1.1" 200 -
+2025-02-22 23:05:56,891 - INFO - 127.0.0.1 - - [22/Feb/2025 23:05:56] "[33mGET /analytic HTTP/1.1[0m" 404 -
+2025-02-22 23:06:01,059 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:01] "[33mGET /analytic HTTP/1.1[0m" 404 -
+2025-02-22 23:06:10,291 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:06:10,526 - INFO -  * Restarting with stat
+2025-02-22 23:06:12,659 - WARNING -  * Debugger is active!
+2025-02-22 23:06:12,696 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:06:12,743 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:12] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:06:12,758 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:12] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-02-22 23:06:18,945 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:18] "[35m[1mPOST /predict_diabetes HTTP/1.1[0m" 500 -
+2025-02-22 23:06:21,553 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:21] "[35m[1mPOST /predict_diabetes HTTP/1.1[0m" 500 -
+2025-02-22 23:06:34,428 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:34] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:35,276 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:35] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:36,513 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:36] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:06:39,236 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:39] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:42,968 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:42] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:44,583 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:44] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:45,315 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:45] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:45,517 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:45] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:47,902 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:47] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:48,437 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:48] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:06:50,069 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:50] "[35m[1mPOST /predict_diabetes HTTP/1.1[0m" 500 -
+2025-02-22 23:06:55,417 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:55] "[35m[1mPOST /predict_diabetes HTTP/1.1[0m" 500 -
+2025-02-22 23:06:57,968 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:57] "[35m[1mPOST /predict_diabetes HTTP/1.1[0m" 500 -
+2025-02-22 23:06:59,512 - INFO - 127.0.0.1 - - [22/Feb/2025 23:06:59] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:07:01,884 - INFO - 127.0.0.1 - - [22/Feb/2025 23:07:01] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:07:41,490 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:07:41,703 - INFO -  * Restarting with stat
+2025-02-22 23:07:43,428 - WARNING -  * Debugger is active!
+2025-02-22 23:07:43,457 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:07:43,505 - INFO - 127.0.0.1 - - [22/Feb/2025 23:07:43] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:07:43,506 - INFO - 127.0.0.1 - - [22/Feb/2025 23:07:43] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:07:45,825 - INFO - 127.0.0.1 - - [22/Feb/2025 23:07:45] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:07:54,192 - INFO - 127.0.0.1 - - [22/Feb/2025 23:07:54] "POST /predict_heart_disease HTTP/1.1" 200 -
+2025-02-22 23:08:01,359 - INFO - 127.0.0.1 - - [22/Feb/2025 23:08:01] "POST /predict_heart_disease HTTP/1.1" 200 -
+2025-02-22 23:12:40,225 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:12:40,512 - INFO -  * Restarting with stat
+2025-02-22 23:12:42,616 - WARNING -  * Debugger is active!
+2025-02-22 23:12:42,643 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:13:11,507 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:13:11,708 - INFO -  * Restarting with stat
+2025-02-22 23:13:13,463 - WARNING -  * Debugger is active!
+2025-02-22 23:13:13,494 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:13:39,647 - INFO - 127.0.0.1 - - [22/Feb/2025 23:13:39] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:14:02,523 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:14:11,413 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:14:13,845 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:14:43,122 - INFO - 127.0.0.1 - - [22/Feb/2025 23:14:43] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:14:55,678 - INFO - 127.0.0.1 - - [22/Feb/2025 23:14:55] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:14:58,621 - INFO - 127.0.0.1 - - [22/Feb/2025 23:14:58] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:15:12,898 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:15:58,836 - INFO - 127.0.0.1 - - [22/Feb/2025 23:15:58] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:17:35,224 - INFO - 127.0.0.1 - - [22/Feb/2025 23:17:35] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:18:18,509 - INFO - 127.0.0.1 - - [22/Feb/2025 23:18:18] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:18:56,573 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:19:07,599 - INFO - 127.0.0.1 - - [22/Feb/2025 23:19:07] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:20:03,719 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:20:04,143 - INFO -  * Restarting with stat
+2025-02-22 23:20:06,383 - WARNING -  * Debugger is active!
+2025-02-22 23:20:06,414 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:20:41,374 - INFO - 127.0.0.1 - - [22/Feb/2025 23:20:41] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:27:36,649 - INFO - 127.0.0.1 - - [22/Feb/2025 23:27:36] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:27:47,740 - INFO - 127.0.0.1 - - [22/Feb/2025 23:27:47] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:28:04,885 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:28:57,316 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:28:57,350 - INFO - 127.0.0.1 - - [22/Feb/2025 23:28:57] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:29:03,315 - INFO - 127.0.0.1 - - [22/Feb/2025 23:29:03] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:29:38,438 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:30:11,996 - INFO - 127.0.0.1 - - [22/Feb/2025 23:30:11] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:30:27,494 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:30:58,301 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:30:58,329 - INFO - 127.0.0.1 - - [22/Feb/2025 23:30:58] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:31:13,287 - INFO - 127.0.0.1 - - [22/Feb/2025 23:31:13] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:31:13,985 - INFO - 127.0.0.1 - - [22/Feb/2025 23:31:13] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:31:17,841 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:31:26,001 - INFO - 127.0.0.1 - - [22/Feb/2025 23:31:25] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:31:50,598 - INFO - 127.0.0.1 - - [22/Feb/2025 23:31:50] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:31:54,348 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:31:54,369 - INFO - 127.0.0.1 - - [22/Feb/2025 23:31:54] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:33:31,151 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:33:31,521 - INFO -  * Restarting with stat
+2025-02-22 23:33:33,740 - WARNING -  * Debugger is active!
+2025-02-22 23:33:33,774 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:33:35,491 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:33:35,651 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:33:48,955 - INFO - 127.0.0.1 - - [22/Feb/2025 23:33:48] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:34:04,631 - INFO - 127.0.0.1 - - [22/Feb/2025 23:34:04] "POST /predict_heart_disease HTTP/1.1" 200 -
+2025-02-22 23:34:22,591 - INFO - 127.0.0.1 - - [22/Feb/2025 23:34:22] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:35:48,108 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:35:48,358 - INFO -  * Restarting with stat
+2025-02-22 23:35:50,568 - WARNING -  * Debugger is active!
+2025-02-22 23:35:50,605 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:35:52,385 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:35:52,617 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:35:55,630 - INFO - 127.0.0.1 - - [22/Feb/2025 23:35:55] "POST /predict_heart_disease HTTP/1.1" 200 -
+2025-02-22 23:36:16,359 - INFO - 127.0.0.1 - - [22/Feb/2025 23:36:16] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:36:55,563 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:36:55,816 - INFO -  * Restarting with stat
+2025-02-22 23:36:57,996 - WARNING -  * Debugger is active!
+2025-02-22 23:36:58,027 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:36:59,309 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:37:02,540 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:02] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:37:31,614 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:31] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:37:32,602 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:32] "GET / HTTP/1.1" 200 -
+2025-02-22 23:37:34,452 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:34] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:37:36,432 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:36] "GET /services HTTP/1.1" 200 -
+2025-02-22 23:37:40,446 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:40] "GET /chatbot HTTP/1.1" 200 -
+2025-02-22 23:37:44,240 - INFO - 127.0.0.1 - - [22/Feb/2025 23:37:44] "GET / HTTP/1.1" 200 -
+2025-02-22 23:40:44,253 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:40:44,545 - INFO -  * Restarting with stat
+2025-02-22 23:40:46,770 - WARNING -  * Debugger is active!
+2025-02-22 23:40:46,806 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:40:46,853 - INFO - 127.0.0.1 - - [22/Feb/2025 23:40:46] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:40:50,659 - INFO - 127.0.0.1 - - [22/Feb/2025 23:40:50] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:44:50,250 - INFO - 127.0.0.1 - - [22/Feb/2025 23:44:50] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:45:02,999 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:02] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:45:08,959 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:08] "[33mPOST /predict_joint_pain HTTP/1.1[0m" 404 -
+2025-02-22 23:45:13,190 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:13] "[33mPOST /predict_joint_pain HTTP/1.1[0m" 404 -
+2025-02-22 23:45:22,620 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:22] "[33mPOST /predict_sleep HTTP/1.1[0m" 404 -
+2025-02-22 23:45:23,822 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:23] "[33mPOST /predict_nutrition HTTP/1.1[0m" 404 -
+2025-02-22 23:45:24,804 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:24] "[33mPOST /predict_stress HTTP/1.1[0m" 404 -
+2025-02-22 23:45:29,879 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:45:33,005 - INFO - 127.0.0.1 - - [22/Feb/2025 23:45:33] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:48:33,496 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:48:33,843 - INFO -  * Restarting with stat
+2025-02-22 23:48:35,997 - WARNING -  * Debugger is active!
+2025-02-22 23:48:36,033 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:48:36,082 - INFO - 127.0.0.1 - - [22/Feb/2025 23:48:36] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:48:37,605 - INFO - 127.0.0.1 - - [22/Feb/2025 23:48:37] "[33mPOST /predict_stress HTTP/1.1[0m" 404 -
+2025-02-22 23:48:41,455 - INFO - 127.0.0.1 - - [22/Feb/2025 23:48:41] "[33mPOST /predict_sleep HTTP/1.1[0m" 404 -
+2025-02-22 23:48:42,356 - INFO - 127.0.0.1 - - [22/Feb/2025 23:48:42] "[33mPOST /predict_nutrition HTTP/1.1[0m" 404 -
+2025-02-22 23:48:44,273 - INFO - 127.0.0.1 - - [22/Feb/2025 23:48:44] "[33mPOST /predict_joint_pain HTTP/1.1[0m" 404 -
+2025-02-22 23:52:20,403 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:52:20,612 - INFO -  * Restarting with stat
+2025-02-22 23:52:22,381 - WARNING -  * Debugger is active!
+2025-02-22 23:52:22,410 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:52:22,457 - INFO - 127.0.0.1 - - [22/Feb/2025 23:52:22] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:52:25,256 - INFO - 127.0.0.1 - - [22/Feb/2025 23:52:25] "[33mPOST /predict_stress HTTP/1.1[0m" 404 -
+2025-02-22 23:52:28,455 - INFO - 127.0.0.1 - - [22/Feb/2025 23:52:28] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:52:32,652 - INFO - 127.0.0.1 - - [22/Feb/2025 23:52:32] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:52:32,965 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:52:33,841 - INFO - 127.0.0.1 - - [22/Feb/2025 23:52:33] "[35m[1mPOST /predict_heart_disease HTTP/1.1[0m" 500 -
+2025-02-22 23:52:38,778 - INFO - 127.0.0.1 - - [22/Feb/2025 23:52:38] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:53:40,077 - INFO -  * Detected change in '/Users/kartikeysapkal/Documents/Kartikey-v01/app.py', reloading
+2025-02-22 23:53:40,363 - INFO -  * Restarting with stat
+2025-02-22 23:53:42,699 - WARNING -  * Debugger is active!
+2025-02-22 23:53:42,732 - INFO -  * Debugger PIN: 105-815-126
+2025-02-22 23:53:42,778 - INFO - 127.0.0.1 - - [22/Feb/2025 23:53:42] "GET /analytic HTTP/1.1" 200 -
+2025-02-22 23:53:47,686 - INFO - 127.0.0.1 - - [22/Feb/2025 23:53:47] "POST /calculate_bmi HTTP/1.1" 200 -
+2025-02-22 23:53:58,574 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:54:01,280 - INFO - 127.0.0.1 - - [22/Feb/2025 23:54:01] "POST /predict_diabetes HTTP/1.1" 200 -
+2025-02-22 23:54:05,174 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-02-22 23:54:06,910 - INFO - 127.0.0.1 - - [22/Feb/2025 23:54:06] "POST /predict_heart_disease HTTP/1.1" 200 -
+2025-02-22 23:54:45,404 - INFO - 127.0.0.1 - - [22/Feb/2025 23:54:45] "GET / HTTP/1.1" 200 -
+2025-02-22 23:59:57,854 - INFO - 127.0.0.1 - - [22/Feb/2025 23:59:57] "GET / HTTP/1.1" 200 -
+2025-02-23 00:00:04,080 - INFO - 127.0.0.1 - - [23/Feb/2025 00:00:04] "GET /services HTTP/1.1" 200 -
+2025-02-23 00:00:06,058 - INFO - 127.0.0.1 - - [23/Feb/2025 00:00:06] "GET / HTTP/1.1" 200 -
+2025-02-23 00:00:06,997 - INFO - 127.0.0.1 - - [23/Feb/2025 00:00:06] "GET /analytic HTTP/1.1" 200 -
+2025-02-23 00:00:11,246 - INFO - 127.0.0.1 - - [23/Feb/2025 00:00:11] "GET /chatbot HTTP/1.1" 200 -
+2025-02-23 00:00:40,614 - INFO - Saved image to: uploads/20250223_000040/WhatsApp_Image_2025-01-27_at_11.00.24.jpeg
+2025-02-23 00:01:57,846 - INFO - HTTP Request: POST https://sought-precise-lizard.ngrok-free.app/api/chat "HTTP/1.1 200 OK"
+2025-02-23 00:01:57,855 - INFO - 127.0.0.1 - - [23/Feb/2025 00:01:57] "POST /chat HTTP/1.1" 200 -
