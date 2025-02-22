@@ -251,6 +251,48 @@ def predict_heart_disease():
 
     return jsonify({'prediction': prediction})
 
+
+
+@app.route('/dashboard')
+def dashboard():
+    # Sample data for dashboard
+    # You can replace these values with real data from your form submissions or predictions
+    diabetes_data = {
+        'pregnancies': 2,
+        'glucose': 140,
+        'blood_pressure': 80,
+        'skin_thickness': 20,
+        'insulin': 90,
+        'bmi': 29.4,
+        'diabetes_pedigree': 0.5,
+        'age': 45,
+        'prediction': "High risk (Confidence: 85%)"
+    }
+
+    heart_disease_data = {
+        'age': 55,
+        'cholesterol': 230,
+        'blood_pressure': 140,
+        'exercise': "No",
+        'prediction': "Moderate risk (Confidence: 75%)"
+    }
+
+    bmi_data = {
+        'weight': 70,
+        'height': 1.75,
+        'bmi': 22.9  # Calculated BMI
+    }
+
+    return render_template(
+        'dashboard.html',
+        diabetes_data=diabetes_data,
+        heart_disease_data=heart_disease_data,
+        bmi_data=bmi_data
+    )
+
+
+
+
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 # Register blueprint
 app.register_blueprint(chat_blueprint)
