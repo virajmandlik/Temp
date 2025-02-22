@@ -3,223 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Dashboard</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <title>Health Analytics Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <style>
         :root {
-            --bg-primary: #111827;
-            --bg-secondary: #1F2937;
-            --bg-card: #374151;
-            --text-primary: #F9FAFB;
-            --text-secondary: #9CA3AF;
-            --blue: #60A5FA;
-            --red: #EF4444;
-            --green: #34D399;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #60a5fa;
+            --accent-red: #f87171;
+            --accent-green: #34d399;
+            --accent-purple: #a78bfa;
+            --gradient-blue: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            --gradient-red: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+            --gradient-green: linear-gradient(135deg, #34d399 0%, #10b981 100%);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
             background-color: var(--bg-primary);
             color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.5;
             padding: 2rem;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .card {
-            background-color: var(--bg-secondary);
-            border-radius: 0.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
 
         .card-title {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
             color: var(--text-primary);
         }
 
+        .risk-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .risk-low { background: var(--gradient-green); }
+        .risk-medium { background: var(--gradient-red); }
+        .risk-high { background: var(--gradient-red); }
+
         .chart-container {
-            height: 300px;
-            margin-bottom: 1.5rem;
+            height: 260px;
+            margin: 1.5rem 0;
+            position: relative;
         }
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 1rem;
+            margin-top: 1.5rem;
         }
 
         .metric-card {
-            background-color: var(--bg-card);
+            background: var(--bg-card);
             padding: 1rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .metric-card:hover {
+            transform: scale(1.03);
         }
 
         .metric-label {
             color: var(--text-secondary);
             font-size: 0.875rem;
-            text-transform: uppercase;
+            margin-bottom: 0.5rem;
         }
 
         .metric-value {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
         }
 
+        .metric-trend {
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+
+        .trend-up { color: var(--accent-red); }
+        .trend-down { color: var(--accent-green); }
+
         .progress-container {
-            margin-top: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
         }
 
         .progress-bar {
-            width: 100%;
-            height: 0.5rem;
-            background-color: var(--bg-card);
-            border-radius: 9999px;
+            height: 8px;
+            background: var(--bg-card);
+            border-radius: 999px;
             overflow: hidden;
         }
 
         .progress-fill {
             height: 100%;
-            border-radius: 9999px;
-            transition: width 0.3s ease;
+            border-radius: 999px;
+            transition: width 0.5s ease-in-out;
         }
 
-        .progress-fill.blue { background-color: var(--blue); }
-        .progress-fill.red { background-color: var(--red); }
-        .progress-fill.green { background-color: var(--green); }
-
         @media (max-width: 768px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
+            body { padding: 1rem; }
+            h1 { font-size: 2rem; }
+            .dashboard-grid { gap: 1rem; }
+        }
+
+        .sparkline-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 2px currentColor); }
+            to { filter: drop-shadow(0 0 6px currentColor); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Health Prediction Dashboard</h1>
+        <h1>Health Analytics Dashboard</h1>
         
         <div class="dashboard-grid">
-            <!-- Diabetes Risk Section -->
+            <!-- Real-time Metrics -->
             <div class="card">
-                <h2 class="card-title">Diabetes Risk Assessment</h2>
-                <div class="chart-container">
-                    <canvas id="diabetesChart"></canvas>
+                <div class="card-header">
+                    <div class="card-title">Vital Signs</div>
+                    <div class="risk-badge risk-low">LIVE</div>
                 </div>
-                <div class="metrics-grid">
+                <div class="sparkline-grid">
                     <div class="metric-card">
-                        <div class="metric-label">Glucose</div>
-                        <div class="metric-value">95 mg/dL</div>
+                        <div class="metric-label">Heart Rate</div>
+                        <div class="metric-value" id="heartRate">72</div>
+                        <div class="metric-trend trend-down">↓ 5%</div>
                     </div>
                     <div class="metric-card">
                         <div class="metric-label">Blood Pressure</div>
-                        <div class="metric-value">120 mmHg</div>
+                        <div class="metric-value" id="bloodPressure">120/80</div>
+                        <div class="metric-trend trend-up">↑ 2%</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">BMI</div>
-                        <div class="metric-value">24.5</div>
+                        <div class="metric-label">SpO2</div>
+                        <div class="metric-value" id="spo2">98%</div>
+                        <div class="metric-trend trend-down">↓ 1%</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">Risk Level</div>
-                        <div class="metric-value">Low Risk</div>
+                        <div class="metric-label">Temperature</div>
+                        <div class="metric-value" id="temperature">36.6°C</div>
+                        <div class="metric-trend">-</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Heart Disease Risk Section -->
+            <!-- Risk Assessment -->
             <div class="card">
-                <h2 class="card-title">Heart Disease Risk</h2>
+                <div class="card-header">
+                    <div class="card-title">Health Risks</div>
+                    <div class="risk-badge risk-medium">AI PREDICTION</div>
+                </div>
                 <div class="chart-container">
-                    <canvas id="heartChart"></canvas>
+                    <canvas id="riskRadar"></canvas>
                 </div>
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-label">Cholesterol</div>
-                        <div class="metric-value">180 mg/dL</div>
+                        <div class="metric-label">Diabetes Risk</div>
+                        <div class="metric-value" id="diabetesRisk">15%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill accent-blue" style="width: 15%"></div>
+                        </div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">Blood Pressure</div>
-                        <div class="metric-value">120/80</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-label">Exercise</div>
-                        <div class="metric-value">Regular</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-label">Risk Level</div>
-                        <div class="metric-value">Low Risk</div>
+                        <div class="metric-label">Cardiac Risk</div>
+                        <div class="metric-value" id="cardiacRisk">22%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill accent-red" style="width: 22%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- BMI Tracking Section -->
+            <!-- Trends Over Time -->
             <div class="card">
-                <h2 class="card-title">BMI Tracking</h2>
+                <div class="card-header">
+                    <div class="card-title">Health Trends</div>
+                    <div class="risk-badge risk-low">30 DAYS</div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+
+            <!-- BMI & Activity -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Body Metrics</div>
+                    <div class="risk-badge risk-low">SYNCED</div>
+                </div>
                 <div class="chart-container">
                     <canvas id="bmiChart"></canvas>
                 </div>
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-label">Weight</div>
-                        <div class="metric-value">68 kg</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-label">Height</div>
-                        <div class="metric-value">1.75 m</div>
-                    </div>
-                    <div class="metric-card">
                         <div class="metric-label">BMI</div>
-                        <div class="metric-value">24.5</div>
+                        <div class="metric-value" id="currentBmi">24.5</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill accent-green" style="width: 65%"></div>
+                        </div>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-label">Status</div>
-                        <div class="metric-value">Normal</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Risk Summary Section -->
-            <div class="card">
-                <h2 class="card-title">Risk Summary</h2>
-                <div class="progress-container">
-                    <h3>Diabetes Risk</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill blue" style="width: 30%"></div>
-                    </div>
-                </div>
-                <div class="progress-container">
-                    <h3>Heart Disease Risk</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill red" style="width: 25%"></div>
-                    </div>
-                </div>
-                <div class="progress-container">
-                    <h3>BMI Status</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill green" style="width: 60%"></div>
+                    <div class="metric-card glow" style="color: var(--accent-purple)">
+                        <div class="metric-label">Daily Activity</div>
+                        <div class="metric-value" id="activityScore">84%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill accent-purple" style="width: 84%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,89 +290,186 @@
     </div>
 
     <script>
-        // Sample data
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
-        const glucoseData = [95, 100, 92, 98, 95, 97];
-        const bloodPressureData = [120, 125, 118, 122, 121, 119];
-        const bmiData = [24.5, 24.3, 24.1, 24.0, 24.2, 24.5];
+        Chart.register(ChartDataLabels);
 
-        // Shared chart options
-        const chartOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#9CA3AF'
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    grid: {
-                        color: '#374151'
-                    },
-                    ticks: {
-                        color: '#9CA3AF'
-                    }
-                },
-                x: {
-                    grid: {
-                        color: '#374151'
-                    },
-                    ticks: {
-                        color: '#9CA3AF'
-                    }
-                }
+        class HealthDashboard {
+            constructor() {
+                this.initCharts();
+                this.startLiveUpdates();
             }
-        };
 
-        // Diabetes Chart
-        new Chart(document.getElementById('diabetesChart'), {
-            type: 'line',
-            data: {
-                labels: months,
-                datasets: [{
-                    label: 'Glucose Level',
-                    data: glucoseData,
-                    borderColor: '#60A5FA',
-                    tension: 0.4,
-                    fill: false
-                }]
-            },
-            options: chartOptions
-        });
+            initCharts() {
+                this.riskRadar = new Chart(document.getElementById('riskRadar'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Metabolic', 'Cardiac', 'Respiratory', 'Nutrition', 'Activity'],
+                        datasets: [{
+                            label: 'Health Risks',
+                            data: [35, 45, 25, 30, 40],
+                            backgroundColor: 'rgba(96, 165, 250, 0.2)',
+                            borderColor: '#60a5fa',
+                            pointBackgroundColor: '#60a5fa',
+                            pointBorderColor: '#fff',
+                            tension: 0.4
+                        }]
+                    },
+                    options: this.getRadarOptions()
+                });
 
-        // Heart Disease Chart
-        new Chart(document.getElementById('heartChart'), {
-            type: 'line',
-            data: {
-                labels: months,
-                datasets: [{
-                    label: 'Blood Pressure',
-                    data: bloodPressureData,
-                    borderColor: '#EF4444',
-                    tension: 0.4,
-                    fill: true,
-                    backgroundColor: 'rgba(239, 68, 68, 0.1)'
-                }]
-            },
-            options: chartOptions
-        });
+                this.trendChart = new Chart(document.getElementById('trendChart'), {
+                    type: 'line',
+                    data: {
+                        labels: this.generateTimeLabels(30),
+                        datasets: [{
+                            label: 'Heart Rate',
+                            data: this.generateRandomData(30, 60, 100),
+                            borderColor: '#f87171',
+                            fill: false,
+                            tension: 0.4
+                        }, {
+                            label: 'Blood Pressure',
+                            data: this.generateRandomData(30, 110, 130),
+                            borderColor: '#60a5fa',
+                            fill: false,
+                            tension: 0.4
+                        }]
+                    },
+                    options: this.getLineOptions()
+                });
 
-        // BMI Chart
-        new Chart(document.getElementById('bmiChart'), {
-            type: 'bar',
-            data: {
-                labels: months,
-                datasets: [{
-                    label: 'BMI',
-                    data: bmiData,
-                    backgroundColor: '#34D399'
-                }]
-            },
-            options: chartOptions
-        });
+                this.bmiChart = new Chart(document.getElementById('bmiChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                        datasets: [{
+                            label: 'BMI History',
+                            data: [22.3, 22.8, 23.1, 23.5, 23.8, 24.1],
+                            backgroundColor: '#34d399',
+                            borderRadius: 6
+                        }]
+                    },
+                    options: this.getBarOptions()
+                });
+            }
+
+            getRadarOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: { display: false },
+                        legend: { display: false }
+                    },
+                    scales: {
+                        r: {
+                            grid: { color: '#334155' },
+                            pointLabels: { color: '#94a3b8' },
+                            angleLines: { color: '#334155' },
+                            ticks: { 
+                                display: false,
+                                backdropColor: 'transparent'
+                            }
+                        }
+                    }
+                };
+            }
+
+            getLineOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index' },
+                    plugins: {
+                        legend: { labels: { color: '#94a3b8' } },
+                        tooltip: { enabled: true }
+                    },
+                    scales: {
+                        x: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+                        y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
+                    }
+                };
+            }
+
+            getBarOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: { 
+                            color: '#f8fafc',
+                            anchor: 'end',
+                            align: 'top'
+                        }
+                    },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+                        y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
+                    }
+                };
+            }
+
+            generateTimeLabels(days) {
+                return Array.from({ length: days }, (_, i) => 
+                    new Date(Date.now() - (days - i) * 86400000).toLocaleDateString('en-US', { 
+                        month: 'short', day: 'numeric' 
+                    }));
+            }
+
+            generateRandomData(count, min, max) {
+                return Array.from({ length: count }, () => 
+                    Math.floor(Math.random() * (max - min + 1)) + min);
+            }
+
+            startLiveUpdates() {
+                setInterval(() => this.updateVitals(), 3000);
+                setInterval(() => this.updateRisks(), 5000);
+                setInterval(() => this.updateTrends(), 10000);
+            }
+
+            updateVitals() {
+                const randomize = (base, range) => 
+                    Math.floor(base + (Math.random() * range * 2 - range));
+                
+                document.getElementById('heartRate').textContent = 
+                    randomize(72, 5);
+                document.getElementById('bloodPressure').textContent = 
+                    `${randomize(120, 5)}/${randomize(80, 5)}`;
+                document.getElementById('spo2').textContent = 
+                    `${randomize(98, 1)}%`;
+                document.getElementById('temperature').textContent = 
+                    `${(36.6 + Math.random() * 0.4).toFixed(1)}°C`;
+            }
+
+            updateRisks() {
+                const updateRisk = (id, min, max) => {
+                    const value = Math.floor(Math.random() * (max - min + 1)) + min;
+                    document.getElementById(id).textContent = `${value}%`;
+                    document.querySelector(`#${id} + .progress-bar .progress-fill`)
+                        .style.width = `${value}%`;
+                };
+
+                updateRisk('diabetesRisk', 10, 25);
+                updateRisk('cardiacRisk', 15, 30);
+                document.getElementById('activityScore').textContent = 
+                    `${Math.floor(Math.random() * 20) + 80}%`;
+            }
+
+            updateTrends() {
+                this.trendChart.data.datasets.forEach(dataset => {
+                    dataset.data = dataset.data.slice(1);
+                    dataset.data.push(
+                        dataset.label === 'Heart Rate' 
+                            ? Math.floor(Math.random() * 40) + 60
+                            : Math.floor(Math.random() * 20) + 110
+                    );
+                });
+                this.trendChart.update();
+            }
+        }
+
+        // Initialize dashboard
+        new HealthDashboard();
     </script>
 </body>
 </html>

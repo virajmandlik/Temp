@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Hub - Disease Prediction</title>
+    <title>Aarogya - Disease Prediction</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         * {
@@ -216,13 +216,13 @@
 
     <div class="nav-container">
         <nav>
-            <div class="logo">Healthcare Hub</div>
+            <div class="logo">Aarogya</div>
              <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/analytic">Analytics</a></li>
-                <li><a href="/chatbot">Chatbot</a></li>
-                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./analytics.html">Services</a></li>
+                <li><a href="./analytics.html">Analytics</a></li>
+                <li><a href="./chatbot.html">Chatbot</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
 
             </ul>
         </nav>
@@ -233,7 +233,7 @@
         <p style="text-align: center; color: #9ca3af; margin-bottom: 2rem;">Enter your symptoms for AI-powered diagnosis and treatment recommendations</p>
 
         <div class="form-container">
-            <form action="/predict" method="post">
+            <form action="http://127.0.0.1:5000/predict" method="post">
                 <div class="input-group">
                     <label for="symptoms" class="input-label">Describe your symptoms:</label>
                     <textarea

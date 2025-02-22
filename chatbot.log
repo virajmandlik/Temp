@@ -950,3 +950,16 @@
 2025-02-23 00:36:27,290 - INFO - 127.0.0.1 - - [23/Feb/2025 00:36:27] "GET /analytic HTTP/1.1" 200 -
 2025-02-23 00:36:29,465 - INFO - 127.0.0.1 - - [23/Feb/2025 00:36:29] "GET /chatbot HTTP/1.1" 200 -
 2025-02-23 00:36:31,881 - INFO - 127.0.0.1 - - [23/Feb/2025 00:36:31] "GET /dashboard HTTP/1.1" 200 -
+2025-02-23 04:30:35,685 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-23 04:30:35,685 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 04:30:35,693 - INFO -  * Restarting with stat
+2025-02-23 04:30:50,440 - WARNING -  * Debugger is active!
+2025-02-23 04:30:50,495 - INFO -  * Debugger PIN: 107-143-942
+2025-02-23 04:34:38,601 - INFO - 127.0.0.1 - - [23/Feb/2025 04:34:38] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-02-23 04:35:31,035 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-23 04:35:31,035 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 04:35:31,043 - INFO -  * Restarting with stat
+2025-02-23 04:35:40,969 - WARNING -  * Debugger is active!
+2025-02-23 04:35:40,993 - INFO -  * Debugger PIN: 107-143-942
