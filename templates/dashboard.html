@@ -185,12 +185,96 @@
             from { filter: drop-shadow(0 0 2px currentColor); }
             to { filter: drop-shadow(0 0 6px currentColor); }
         }
+
+
+            /* Add to existing styles */
+    .nav-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-card {
+        background: var(--bg-secondary);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+    }
+
+    .nav-card.bmi::before { background: var(--gradient-green); }
+    .nav-card.heart::before { background: var(--gradient-red); }
+    .nav-card.diabetes::before { background: var(--gradient-blue); }
+
+    .nav-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .nav-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-button {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 999px;
+        color: var(--text-primary);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .nav-card:hover .nav-button {
+        background: rgba(255, 255, 255, 0.2);
+    }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Health Analytics Dashboard</h1>
         
+        <div class="nav-grid">
+            <a href="./analytics.html" class="nav-card bmi">
+                <span class="nav-icon">🏃♂️</span>
+                <div class="nav-title">BMI Assessment</div>
+                <button class="nav-button">Assess Now</button>
+            </a>
+            
+            <a href="./analytics.html" class="nav-card heart">
+                <span class="nav-icon">❤️</span>
+                <div class="nav-title">Heart Health Check</div>
+                <button class="nav-button">Assess Now</button>
+            </a>
+            
+            <a href="./analytics.html" class="nav-card diabetes">
+                <span class="nav-icon">🩸</span>
+                <div class="nav-title">Diabetes Risk Test</div>
+                <button class="nav-button">Assess Now</button>
+            </a>
+        </div>
+
         <div class="dashboard-grid">
             <!-- Real-time Metrics -->
             <div class="card">
